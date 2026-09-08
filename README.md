@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Yustar Pramudana — Portfolio
 
-## Getting Started
+Single-page portfolio for Yustar Pramudana — Senior Full-Stack & Mobile Engineer (10+ yrs), Kotlin / Java / Swift, AI-accelerated systems architecture.
 
-First, run the development server:
+## Stack
+
+- Next.js 15 (App Router, static prerender) · React 19
+- TypeScript (strict)
+- Tailwind CSS v4
+- Zod (content contracts)
+
+## Structure (clean architecture)
+
+```
+src/
+  app/          routes, metadata, layout — framework wiring only
+  content/      typed data files — the single source of truth for all copy
+  domain/       Zod schemas + inferred types (no React)
+  components/   presentational UI, data passed in via props
+  lib/          pure helpers (date formatting)
+```
+
+Dependency flow is one-way: `domain ← content ← components ← app`. The UI never reads content directly.
+
+## Editing content
+
+All copy lives in `src/content/*.ts` and is validated at build time against the schemas in `src/domain/schemas.ts`. To add a job, project, skill or article, edit the matching content file — no component changes needed. A schema violation fails the build.
+
+## Run locally
+
+### 1. Prerequisites
+
+- **Node.js 18.18+** (recommended: Node 20 LTS or newer)
+- **npm** (ships with Node)
+
+Check your versions:
+
+```bash
+node -v
+npm -v
+```
+
+### 2. Install dependencies
+
+From the project root:
+
+```bash
+npm install
+```
+
+### 3. Start the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open **http://localhost:3000** in your browser. The dev server:
+- hot-reloads on file changes (Turbopack)
+- validates content against the Zod schemas on import — schema or type errors surface in the terminal and the browser overlay
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The dev server also downloads the Geist font from Google Fonts on first run, so it needs internet access.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Production build (optional)
 
-## Learn More
+```bash
+npm run build   # typecheck + lint + optimized static build
+npm start       # serve the production build at http://localhost:3000
+```
 
-To learn more about Next.js, take a look at the following resources:
+`npm start` serves the already-built output — run `npm run build` again after any code/content change.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5. Quality checks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run lint    # ESLint
+```
 
-## Deploy on Vercel
+## Commands
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install     # install dependencies
+npm run dev     # local dev server (http://localhost:3000)
+npm run lint    # eslint
+npm run build   # production build (typecheck + lint + static prerender)
+npm start       # serve production build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Notes
+
+- `src/content/site.ts` holds the canonical site URL — update `url` to your real domain before going live (also powers `metadataBase`).
+- The resume CTA currently points to LinkedIn. To serve a downloadable PDF, drop the file at `public/resume.pdf` and set `resumeUrl` in `src/content/profile.ts` to `/resume.pdf`.

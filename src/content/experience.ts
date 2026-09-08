@@ -1,0 +1,138 @@
+import { RoleSchema } from "@/domain/schemas";
+
+export const roles = [
+  RoleSchema.parse({
+    company: "Rewardz",
+    role: "Senior Android Developer",
+    employmentType: "Full-time",
+    start: "2022-10",
+    end: "2025-09",
+    location: "Singapore",
+    workModel: "Remote",
+    summary:
+      "Android lead on reward & loyalty platform — modernized the UI layer and built a health ecosystem with offline-first architecture.",
+    bullets: [
+      "Migrated legacy Android UI components to Jetpack Compose, improving maintainability and cutting UI boilerplate.",
+      "Built a Health & Fitness module using Kotlin, Flow and Room with offline-first architecture.",
+      "Integrated the Health Connect API for unified tracking of steps, sleep, and activity data.",
+      "Collaborated with backend teams to guarantee reliable data synchronization and API contracts.",
+    ],
+    skills: [
+      "Kotlin",
+      "Jetpack Compose",
+      "Clean Architecture",
+      "Coroutines",
+      "Flow",
+      "Room",
+      "Offline-first",
+    ],
+  }),
+  RoleSchema.parse({
+    company: "zennya Health",
+    role: "Android Mobile Application Developer",
+    employmentType: "Individual Contractor",
+    start: "2021-04",
+    end: "2022-08",
+    location: "Makati, Philippines",
+    workModel: "Remote",
+    summary:
+      "Remote contractor delivering a healthcare application for patient services and medical data tracking during the pandemic.",
+    bullets: [
+      "Developed features for a healthcare mobile app used for patient services and medical data tracking.",
+      "Implemented offline data handling with Realm for reliability in low-network environments.",
+      "Built a real-time vaccination queue system during the COVID-19 pandemic.",
+      "Improved performance and stability across a mixed Java/Kotlin codebase.",
+    ],
+    skills: [
+      "Android",
+      "Kotlin",
+      "Java",
+      "Realm",
+      "Offline sync",
+      "REST APIs",
+    ],
+  }),
+  RoleSchema.parse({
+    company: "Bank OCBC NISP",
+    role: "Software Engineer",
+    employmentType: "Full-time",
+    start: "2019-01",
+    end: "2021-02",
+    location: "Jakarta, Indonesia",
+    workModel: "Hybrid",
+    summary:
+      "Backend engineer on One Mobile banking — mission-critical financial systems built for security, availability and compliance.",
+    bullets: [
+      "Developed backend services powering the One Mobile banking application.",
+      "Built APIs for the foreign exchange (FX) module supporting real-time currency transactions.",
+      "Worked on Java / Spring MVC services with Microsoft SQL Server in a strict banking compliance environment.",
+    ],
+    skills: [
+      "Java",
+      "Spring MVC",
+      "REST API Development",
+      "Microsoft SQL Server",
+      "Financial systems",
+    ],
+  }),
+  RoleSchema.parse({
+    company: "Lawencon Internasional",
+    role: "Android Developer",
+    employmentType: "Contract",
+    start: "2018-01",
+    end: "2019-01",
+    location: "Jakarta, Indonesia",
+    workModel: "On-site",
+    client: "Bank Rakyat Indonesia",
+    summary:
+      "Built BRISIM — an internal Android application for real-time national transaction monitoring used by bank executives.",
+    bullets: [
+      "Developed BRISIM, an internal app used by bank executives for real-time transaction monitoring.",
+      "Implemented reactive architecture with RxJava to handle high-frequency financial data streams.",
+      "Built data visualization components for national banking transaction metrics.",
+      "Implemented secure local caching for sensitive financial data.",
+    ],
+    skills: [
+      "Android",
+      "RxJava",
+      "MVP",
+      "Financial data visualization",
+    ],
+  }),
+  RoleSchema.parse({
+    company: "PT Xsis Mitra Utama",
+    role: "Software Engineer",
+    employmentType: "Contract",
+    start: "2016-01",
+    end: "2018-01",
+    location: "Jakarta, Indonesia",
+    workModel: "On-site",
+    client: "Bank Negara Indonesia",
+    summary:
+      "Delivered the BNI Mobile Banking v2 hybrid app — from the JS↔native bridge to secure backend APIs and biometric research.",
+    bullets: [
+      "Contributed to BNI Mobile Banking v2, a hybrid Cordova app with a JavaScript UI.",
+      "Developed a custom native bridge connecting JavaScript to native Android Java components.",
+      "Implemented secure SSL communication in the bridge for encrypted API transactions.",
+      "Built backend APIs in .NET C# and Microsoft SQL Server for internal services.",
+      "Collaborated with banking security teams researching biometric authentication (fingerprint & face recognition).",
+    ],
+    skills: ["Java", "Android", "Cordova", ".NET C#", "Microsoft SQL Server"],
+  }),
+  RoleSchema.parse({
+    company: "PT Xsis Mitra Utama",
+    role: "Java Programmer (Bootcamp)",
+    employmentType: "Bootcamp",
+    start: "2015-11",
+    end: "2015-12",
+    location: "Jakarta, Indonesia",
+    workModel: "On-site",
+    summary:
+      "Foundational Java training focused on backend and API development before joining the BNI mobile banking project.",
+    bullets: [
+      "Completed Java training focused on backend and API development.",
+      "Learned Spring MVC, Spring Boot and REST API fundamentals.",
+    ],
+    skills: ["Java", "Spring MVC", "Oracle Database"],
+  }),
+];
