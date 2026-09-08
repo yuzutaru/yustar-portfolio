@@ -9,6 +9,8 @@ export const profile = ProfileSchema.parse({
   location: "Medan, Indonesia",
   availability:
     "Open to Senior / Lead Full-Stack, Mobile & AI-Native roles · Global Remote · ID, SG, MY, JP, SA",
+  avatar: "/me.jpg",
+  heroAvatar: "/avatar.jpg",
   resumeUrl: "https://www.linkedin.com/in/yustar-pramudana/",
   areaFocus: [
     "Android · Kotlin + Jetpack Compose",

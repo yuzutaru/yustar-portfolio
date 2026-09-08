@@ -18,6 +18,8 @@ export const ProfileSchema = z.object({
   positioning: z.string(),
   location: z.string(),
   availability: z.string(),
+  avatar: z.string(),
+  heroAvatar: z.string(),
   resumeUrl: z.url(),
   areaFocus: z.array(z.string()),
   about: z.array(z.string()),

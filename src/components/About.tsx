@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Eyebrow, Section, SectionTitle, Tag } from "@/components/ui";
 import type { Profile } from "@/domain/schemas";
 
@@ -31,7 +32,16 @@ export function About({ profile }: { profile: Profile }) {
         </div>
 
         <div className="lg:col-span-2">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="overflow-hidden rounded-2xl border border-line bg-panel">
+            <Image
+              src={profile.avatar}
+              alt={`${profile.name} portrait`}
+              width={900}
+              height={1600}
+              className="aspect-[9/14] w-full object-cover object-top"
+            />
+          </div>
+          <div className="mt-4 grid grid-cols-2 gap-3">
             {STATS.map((stat) => (
               <div
                 key={stat.label}
