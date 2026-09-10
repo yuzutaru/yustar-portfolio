@@ -20,9 +20,70 @@ export const profile = ProfileSchema.parse({
     "AI-Native Architecture · MCP / OpenAPI",
   ],
   about: [
-    "Full-stack & mobile engineer (10+ years) with a dual background: enterprise backend experience in banking (.NET C#, Java) combined with modern AI-native product development across Web, Android, and iOS.",
-    "I design and deliver software where AI models and autonomous agents (Claude Code, Cursor, Opencode) are built directly into the architectural fabric — backed by deterministic guardrails, clean domain layers, and strict contract typing.",
-    "The result: enterprise-grade backend discipline with AI-accelerated workflows, shipping production software at ~3x velocity without compromising architectural rigor.",
+    "Full-stack & mobile engineer (10+ years) with a dual background: enterprise backend experience in banking (Java, .NET C#) combined with modern AI-native product development across Web, Android, and iOS.",
+    "I design and deliver software where AI models and autonomous agents (Claude Code, Cursor, Kilo, Opencode) are built directly into the architectural fabric — backed by deterministic guardrails, clean domain layers, and strict contract typing.",
+    "I combine enterprise-grade backend discipline with AI-accelerated workflows to ship production software at 3x velocity without compromising architectural rigor.",
+  ],
+  highlights: [
+    {
+      title: "Enterprise & Banking Backends",
+      text: "Proven track record in banking environments managing mission-critical Java, .NET C#, and SQL backend infrastructure built for security, high availability, and compliance.",
+    },
+    {
+      title: "Modern Full-Stack & Mobile",
+      text: "End-to-end delivery across React, Kotlin (Android), and Swift (iOS) driven by a unified OpenAPI spec, Supabase/PostgreSQL backends (RLS, RPCs), and Deno Edge Functions.",
+    },
+    {
+      title: "Custom Agent Tooling & MCP",
+      text: "Architected custom Model Context Protocol (MCP) servers to automate multi-language client codegen (Kotlin/Swift/TS) and enforce monorepo contract integrity across platforms.",
+    },
+    {
+      title: "Applied Computer Vision & ML",
+      text: "Designed a scale-invariant facial search engine using Google Cloud Vision and hand-designed geometric scoring algorithms (inter-eye landmarks + exponential decay weighting).",
+    },
+    {
+      title: "Payments & Webhooks",
+      text: "Integrated Airwallex marketplace payments featuring HMAC-SHA256 signature verification, KYC onboarding, and idempotent event handling.",
+    },
+  ],
+  techStack: [
+    {
+      category: "Languages & Backends",
+      items: [
+        "TypeScript",
+        "Python",
+        ".NET C#",
+        "Java",
+        "Kotlin",
+        "Swift",
+        "SQL",
+        "Deno",
+        "Supabase",
+        "PostgreSQL",
+        "REST/OpenAPI",
+      ],
+    },
+    {
+      category: "AI & Agents",
+      items: [
+        "Custom MCP",
+        "Google Vision API",
+        "Gemini API",
+        "Claude Code",
+        "Cursor",
+        "Kilo",
+      ],
+    },
+    {
+      category: "Mobile & Web",
+      items: [
+        "React",
+        "React Native (Expo)",
+        "Jetpack Compose",
+        "SwiftUI",
+        "Monorepo (pnpm/Turbo)",
+      ],
+    },
   ],
   keywords: [
     "Senior Full-Stack Engineer",

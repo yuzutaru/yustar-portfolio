@@ -14,7 +14,7 @@ export function Hero({
   const github = socials.find((s) => s.platform === "github");
 
   return (
-    <section id="top" className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+    <section id="top" className="relative overflow-hidden pt-36 pb-10 sm:pt-44 sm:pb-16">
       <div className="mx-auto w-full max-w-5xl px-5 sm:px-8">
         <div className="flex flex-col-reverse items-start gap-10 sm:flex-row sm:items-center sm:justify-between">
           <div className="max-w-3xl">

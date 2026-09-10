@@ -11,6 +11,18 @@ export const SocialLinkSchema = z.object({
 });
 export type SocialLink = z.infer<typeof SocialLinkSchema>;
 
+export const HighlightSchema = z.object({
+  title: z.string(),
+  text: z.string(),
+});
+export type Highlight = z.infer<typeof HighlightSchema>;
+
+export const SkillGroupSchema = z.object({
+  category: z.string(),
+  items: z.array(z.string()),
+});
+export type SkillGroup = z.infer<typeof SkillGroupSchema>;
+
 export const ProfileSchema = z.object({
   name: z.string(),
   firstName: z.string(),
@@ -23,6 +35,8 @@ export const ProfileSchema = z.object({
   resumeUrl: z.url(),
   areaFocus: z.array(z.string()),
   about: z.array(z.string()),
+  highlights: z.array(HighlightSchema),
+  techStack: z.array(SkillGroupSchema),
   keywords: z.array(z.string()),
 });
 export type Profile = z.infer<typeof ProfileSchema>;
@@ -49,12 +63,6 @@ export const RoleSchema = z.object({
   skills: z.array(z.string()),
 });
 export type Role = z.infer<typeof RoleSchema>;
-
-export const SkillGroupSchema = z.object({
-  category: z.string(),
-  items: z.array(z.string()),
-});
-export type SkillGroup = z.infer<typeof SkillGroupSchema>;
 
 export const SuccessStorySchema = z.object({
   title: z.string(),
