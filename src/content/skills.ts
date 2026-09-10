@@ -4,11 +4,11 @@ export const skillGroups = [
   SkillGroupSchema.parse({
     category: "Languages & Backends",
     items: [
-      "TypeScript",
       "Kotlin",
       "Java",
       "Swift",
       "Python",
+      "TypeScript",
       ".NET C#",
       "SQL",
       "Deno",

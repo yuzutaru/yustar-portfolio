@@ -26,10 +26,6 @@ export const profile = ProfileSchema.parse({
   ],
   highlights: [
     {
-      title: "Enterprise & Banking Backends",
-      text: "Proven track record in banking environments managing mission-critical Java, .NET C#, and SQL backend infrastructure built for security, high availability, and compliance.",
-    },
-    {
       title: "Modern Full-Stack & Mobile",
       text: "End-to-end delivery across React, Kotlin (Android), and Swift (iOS) driven by a unified OpenAPI spec, Supabase/PostgreSQL backends (RLS, RPCs), and Deno Edge Functions.",
     },
@@ -45,22 +41,35 @@ export const profile = ProfileSchema.parse({
       title: "Payments & Webhooks",
       text: "Integrated Airwallex marketplace payments featuring HMAC-SHA256 signature verification, KYC onboarding, and idempotent event handling.",
     },
+    {
+      title: "Enterprise & Banking Backends",
+      text: "Proven track record in banking environments managing mission-critical Java, .NET C#, and SQL backend infrastructure built for security, high availability, and compliance.",
+    }
   ],
   techStack: [
     {
       category: "Languages & Backends",
       items: [
-        "TypeScript",
-        "Python",
-        ".NET C#",
-        "Java",
         "Kotlin",
         "Swift",
+        "TypeScript",
+        "Python",
+        "Java",
+        ".NET C#",
         "SQL",
         "Deno",
         "Supabase",
         "PostgreSQL",
         "REST/OpenAPI",
+      ],
+    },
+    {
+      category: "Mobile & Web",
+      items: [
+        "Jetpack Compose",
+        "SwiftUI",
+        "React",
+        "Monorepo (pnpm/Turbo)",
       ],
     },
     {
@@ -70,20 +79,11 @@ export const profile = ProfileSchema.parse({
         "Google Vision API",
         "Gemini API",
         "Claude Code",
+        "Opencode",
         "Cursor",
         "Kilo",
       ],
-    },
-    {
-      category: "Mobile & Web",
-      items: [
-        "React",
-        "React Native (Expo)",
-        "Jetpack Compose",
-        "SwiftUI",
-        "Monorepo (pnpm/Turbo)",
-      ],
-    },
+    }
   ],
   keywords: [
     "Senior Full-Stack Engineer",
