@@ -9,6 +9,9 @@ export const roles = [
     end: "2025-09",
     location: "Singapore",
     workModel: "Remote",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.root.cerrasg&hl=id",
+    storeLabel: "Play Store",
+    screenshots: ["/screenshots/rewardz-1.png", "/screenshots/rewardz-2.png"],
     summary:
       "Android lead on reward & loyalty platform — modernized the UI layer and built a health ecosystem with offline-first architecture.",
     bullets: [
@@ -35,6 +38,13 @@ export const roles = [
     end: "2022-08",
     location: "Makati, Philippines",
     workModel: "Remote",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.zennya.zennya&hl=en&gl=US",
+    storeLabel: "Play Store",
+    screenshots: [
+      "/screenshots/zennya-1.png",
+      "/screenshots/zennya-2.png",
+      "/screenshots/zennya-3.png",
+    ],
     summary:
       "Remote contractor delivering a healthcare application for patient services and medical data tracking during the pandemic.",
     bullets: [
@@ -60,6 +70,13 @@ export const roles = [
     end: "2021-02",
     location: "Jakarta, Indonesia",
     workModel: "Hybrid",
+    storeUrl: "https://play.google.com/store/apps/details?id=com.ocbcnisp.onemobileapp&hl=id",
+    storeLabel: "Play Store",
+    screenshots: [
+      "/screenshots/ocbc-1.png",
+      "/screenshots/ocbc-2.png",
+      "/screenshots/ocbc-3.png",
+    ],
     summary:
       "Backend engineer on One Mobile banking — mission-critical financial systems built for security, availability and compliance.",
     bullets: [
@@ -108,6 +125,13 @@ export const roles = [
     location: "Jakarta, Indonesia",
     workModel: "On-site",
     client: "Bank Negara Indonesia",
+    storeUrl: "https://play.google.com/store/apps/details?id=src.com.bni&hl=id",
+    storeLabel: "Play Store",
+    screenshots: [
+      "/screenshots/bni-1.png",
+      "/screenshots/bni-2.png",
+      "/screenshots/bni-3.png",
+    ],
     summary:
       "Delivered the BNI Mobile Banking v2 hybrid app — from the JS↔native bridge to secure backend APIs and biometric research.",
     bullets: [

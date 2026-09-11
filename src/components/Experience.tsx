@@ -1,5 +1,7 @@
 import { Building2, Briefcase } from "lucide-react";
 import { Eyebrow, Section, SectionTitle, Tag } from "@/components/ui";
+import { PlayStoreIcon } from "@/components/BrandIcons";
+import { ScreenshotGallery } from "@/components/ScreenshotGallery";
 import { formatRange } from "@/lib/format";
 import type { Role } from "@/domain/schemas";
 
@@ -49,6 +51,17 @@ export function Experience({ roles }: { roles: Role[] }) {
                       <span className="rounded-full border border-line bg-panel2 px-2.5 py-1 text-[11px] text-slate-400">
                         {role.workModel}
                       </span>
+                      {role.storeUrl ? (
+                        <a
+                          href={role.storeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[11px] text-accent transition-colors hover:bg-accent/20"
+                        >
+                          <PlayStoreIcon className="h-3 w-3" aria-hidden="true" />
+                          {role.storeLabel ?? "Play Store"}
+                        </a>
+                      ) : null}
                     </div>
                   </div>
 
@@ -73,6 +86,13 @@ export function Experience({ roles }: { roles: Role[] }) {
                       <Tag key={skill}>{skill}</Tag>
                     ))}
                   </div>
+
+                  {role.screenshots?.length ? (
+                    <ScreenshotGallery
+                      screenshots={role.screenshots}
+                      altPrefix={role.company}
+                    />
+                  ) : null}
                 </div>
               </div>
             </li>
