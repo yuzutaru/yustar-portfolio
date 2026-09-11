@@ -11,7 +11,11 @@ export const roles = [
     workModel: "Remote",
     storeUrl: "https://play.google.com/store/apps/details?id=com.root.cerrasg&hl=id",
     storeLabel: "Play Store",
-    screenshots: ["/screenshots/rewardz-1.png", "/screenshots/rewardz-2.png"],
+    screenshots: [
+      "/screenshots/rewardz-1.png",
+      "/screenshots/rewardz-2.png",
+      "/screenshots/rewardz-3.png",
+    ],
     summary:
       "Android lead on reward & loyalty platform — modernized the UI layer and built a health ecosystem with offline-first architecture.",
     bullets: [
