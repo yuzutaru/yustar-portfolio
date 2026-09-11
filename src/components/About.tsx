@@ -78,7 +78,7 @@ export function About({ profile }: { profile: Profile }) {
         </ul>
       </div>
 
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <h3 className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-accent">
           Technical Stack
         </h3>
@@ -104,7 +104,7 @@ export function About({ profile }: { profile: Profile }) {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 }
