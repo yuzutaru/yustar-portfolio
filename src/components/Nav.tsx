@@ -35,7 +35,7 @@ export function Nav({
             href="#top"
             className="font-mono text-sm font-semibold tracking-tight text-white"
           >
-            <span className="text-accent">yp</span>.dev
+            <span className="text-accent">yustar</span>.dev
           </a>
 
           <div className="hidden items-center gap-7 md:flex">
