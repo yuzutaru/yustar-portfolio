@@ -15,7 +15,7 @@ export function Skills({ skillGroups }: { skillGroups: SkillGroup[] }) {
         {skillGroups.map((group) => (
           <div
             key={group.category}
-            className="rounded-2xl border border-line bg-panel p-5"
+            className="rounded-none border border-line bg-panel p-5"
           >
             <h3 className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">
               {group.category}
@@ -24,7 +24,7 @@ export function Skills({ skillGroups }: { skillGroups: SkillGroup[] }) {
               {group.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded-lg border border-line/80 bg-panel2 px-2.5 py-1 text-xs text-slate-300"
+                  className="rounded-none border border-line/80 bg-panel2 px-2.5 py-1 text-xs text-slate-300"
                 >
                   {item}
                 </li>

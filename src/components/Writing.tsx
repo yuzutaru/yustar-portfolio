@@ -19,7 +19,7 @@ export function Writing({ articles }: { articles: Article[] }) {
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col gap-2 rounded-2xl border border-line bg-panel p-5 transition-colors hover:border-accent/40 sm:flex-row sm:items-center sm:justify-between"
+              className="group flex flex-col gap-2 rounded-none border border-line bg-panel p-5 transition-colors hover:border-accent/40 sm:flex-row sm:items-center sm:justify-between"
             >
               <div>
                 <h3 className="text-base font-medium text-slate-200 transition-colors group-hover:text-white">

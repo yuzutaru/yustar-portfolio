@@ -1,15 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #06080f;
-  --color-panel: #0b0f18;
-  --color-panel2: #121827;
-  --color-line: #1e2739;
-  --color-accent: #7c8cff;
-  --color-accent-soft: #b3bcff;
+  --color-ink: #07090c;
+  --color-panel: #0c1016;
+  --color-panel2: #12171f;
+  --color-line: #1e2630;
+  --color-accent: #2dd4bf;
+  --color-accent-soft: #5eead4;
+  --color-amber: #f5b759;
+  --color-comment: #5c6b62;
 
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+  --font-sans: var(--font-jetbrains), ui-monospace, "SF Mono", monospace;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", monospace;
+  --font-display: var(--font-space), ui-monospace, "SF Mono", monospace;
+
+  --animate-blink: blink 1.1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 html {
@@ -18,21 +33,42 @@ html {
 
 body {
   background-color: var(--color-ink);
-  background-image:
-    radial-gradient(55rem 32rem at 50% -12%, rgba(124, 140, 255, 0.16), transparent 60%),
-    radial-gradient(42rem 26rem at 92% 2%, rgba(34, 211, 238, 0.09), transparent 60%);
-  background-repeat: no-repeat;
-  color: #e2e8f0;
+  background-image: radial-gradient(
+    rgba(45, 212, 191, 0.09) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+  background-position: -1px -1px;
+  color: #c9d4cc;
   -webkit-font-smoothing: antialiased;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.16) 3px,
+    rgba(0, 0, 0, 0.16) 3px
+  );
+  mix-blend-mode: multiply;
+}
+
 ::selection {
-  background-color: color-mix(in oklab, var(--color-accent) 35%, transparent);
-  color: #fff;
+  background-color: color-mix(in oklab, var(--color-accent) 40%, transparent);
+  color: #04211c;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .animate-blink {
+    animation: none;
   }
 }

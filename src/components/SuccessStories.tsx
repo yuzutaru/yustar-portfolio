@@ -19,7 +19,7 @@ export function SuccessStories({
         {successStories.map((story, index) => (
           <article
             key={story.title}
-            className="rounded-2xl border border-line bg-panel p-6 sm:p-8"
+            className="rounded-none border border-line bg-panel p-6 sm:p-8"
           >
             <div className="flex items-start gap-5">
               <span className="hidden font-mono text-4xl font-bold leading-none text-line sm:block">
@@ -50,7 +50,7 @@ export function SuccessStories({
                           key={i}
                           className="flex gap-2.5 text-sm leading-relaxed text-slate-400"
                         >
-                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-none bg-accent" aria-hidden="true" />
                           {step}
                         </li>
                       ))}
@@ -71,7 +71,7 @@ export function SuccessStories({
                   {story.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-line bg-panel2 px-3 py-1 font-mono text-[11px] text-accent"
+                      className="rounded-none border border-line bg-panel2 px-3 py-1 font-mono text-[11px] text-accent"
                     >
                       {tag}
                     </span>

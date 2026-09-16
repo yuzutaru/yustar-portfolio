@@ -52,7 +52,7 @@ export function ScreenshotGallery({
             type="button"
             onClick={() => setActiveIndex(i)}
             aria-label={`Enlarge ${altPrefix} screenshot ${i + 1}`}
-            className="relative aspect-[9/16] w-40 shrink-0 cursor-zoom-in overflow-hidden rounded-xl border border-line bg-panel2 transition-colors hover:border-accent/50"
+            className="relative aspect-[9/16] w-40 shrink-0 cursor-zoom-in overflow-hidden rounded-none border border-line bg-panel2 transition-colors hover:border-accent/50"
           >
             <Image
               src={src}
@@ -79,7 +79,7 @@ export function ScreenshotGallery({
             autoFocus
             onClick={() => setActiveIndex(null)}
             aria-label="Close"
-            className="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-panel text-slate-300 transition-colors hover:text-white"
+            className="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-none border border-line bg-panel text-slate-300 transition-colors hover:text-white"
           >
             <X className="h-5 w-5" />
           </button>
@@ -92,7 +92,7 @@ export function ScreenshotGallery({
                 showPrev();
               }}
               aria-label="Previous screenshot"
-              className="absolute left-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-panel text-slate-300 transition-colors hover:text-white"
+              className="absolute left-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-none border border-line bg-panel text-slate-300 transition-colors hover:text-white"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -120,7 +120,7 @@ export function ScreenshotGallery({
                 showNext();
               }}
               aria-label="Next screenshot"
-              className="absolute right-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-line bg-panel text-slate-300 transition-colors hover:text-white"
+              className="absolute right-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-none border border-line bg-panel text-slate-300 transition-colors hover:text-white"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

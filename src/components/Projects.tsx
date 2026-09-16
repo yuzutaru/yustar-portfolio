@@ -16,9 +16,9 @@ export function Projects({ projects }: { projects: Project[] }) {
         {projects.map((project) => (
           <article
             key={project.name}
-            className={`flex flex-col rounded-2xl border p-6 transition-colors ${
+            className={`flex flex-col rounded-none border p-6 transition-colors ${
               project.featured
-                ? "border-accent/30 bg-gradient-to-b from-accent/[0.07] to-panel"
+                ? "border-accent/40 bg-accent/[0.06]"
                 : "border-line bg-panel hover:border-slate-600"
             }`}
           >
@@ -28,7 +28,7 @@ export function Projects({ projects }: { projects: Project[] }) {
               </h3>
               {project.private ? (
                 <span
-                  className="inline-flex items-center gap-1 rounded-full border border-line bg-panel2 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-400"
+                  className="inline-flex items-center gap-1 rounded-none border border-line bg-panel2 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-slate-400"
                   title="Confidential client work"
                 >
                   <Lock className="h-3 w-3" aria-hidden="true" />
@@ -50,7 +50,7 @@ export function Projects({ projects }: { projects: Project[] }) {
               {project.tech.map((tech) => (
                 <span
                   key={tech}
-                  className="rounded-md bg-panel2 px-2 py-1 font-mono text-[11px] text-slate-400"
+                  className="rounded-none bg-panel2 px-2 py-1 font-mono text-[11px] text-slate-400"
                 >
                   {tech}
                 </span>

@@ -22,14 +22,14 @@ export function Experience({ roles }: { roles: Role[] }) {
             <li key={`${role.company}-${role.role}`} className="relative pl-6 sm:pl-0">
               <span
                 aria-hidden="true"
-                className="absolute left-0 top-1.5 hidden h-full w-px bg-gradient-to-b from-accent/60 to-line sm:block"
+                className="absolute left-0 top-1.5 hidden h-full w-px bg-line sm:block"
               />
               <div className="sm:grid sm:grid-cols-[11rem_1fr] sm:gap-8">
                 <div className="mb-2 font-mono text-xs uppercase tracking-wider text-slate-500 sm:mb-0 sm:pt-1.5">
                   {range}
                 </div>
 
-                <div className="rounded-2xl border border-line bg-panel p-5 sm:p-6">
+                <div className="rounded-none border border-line bg-panel p-5 sm:p-6">
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div>
                       <h3 className="text-lg font-semibold text-white">
@@ -44,11 +44,11 @@ export function Experience({ roles }: { roles: Role[] }) {
                       </p>
                     </div>
                     <div className="flex flex-wrap items-center gap-1.5">
-                      <span className="inline-flex items-center gap-1 rounded-full border border-line bg-panel2 px-2.5 py-1 text-[11px] text-slate-400">
+                      <span className="inline-flex items-center gap-1 rounded-none border border-line bg-panel2 px-2.5 py-1 text-[11px] text-slate-400">
                         <Briefcase className="h-3 w-3" aria-hidden="true" />
                         {role.employmentType}
                       </span>
-                      <span className="rounded-full border border-line bg-panel2 px-2.5 py-1 text-[11px] text-slate-400">
+                      <span className="rounded-none border border-line bg-panel2 px-2.5 py-1 text-[11px] text-slate-400">
                         {role.workModel}
                       </span>
                       {role.storeUrl ? (
@@ -56,7 +56,7 @@ export function Experience({ roles }: { roles: Role[] }) {
                           href={role.storeUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 rounded-full border border-accent/30 bg-accent/10 px-2.5 py-1 text-[11px] text-accent transition-colors hover:bg-accent/20"
+                          className="inline-flex items-center gap-1 rounded-none border border-accent/30 bg-accent/10 px-2.5 py-1 text-[11px] text-accent transition-colors hover:bg-accent/20"
                         >
                           <PlayStoreIcon className="h-3 w-3" aria-hidden="true" />
                           {role.storeLabel ?? "Play Store"}
@@ -75,7 +75,7 @@ export function Experience({ roles }: { roles: Role[] }) {
                         key={i}
                         className="flex gap-2.5 text-sm leading-relaxed text-slate-400"
                       >
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-none bg-accent" aria-hidden="true" />
                         {bullet}
                       </li>
                     ))}

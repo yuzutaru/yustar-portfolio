@@ -16,17 +16,44 @@ export function Container({
 
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
-    <p className="mb-3 font-mono text-xs font-medium uppercase tracking-[0.25em] text-accent">
-      {children}
+    <p className="mb-3 font-mono text-xs lowercase tracking-wider text-accent">
+      <span className="text-accent-soft">$</span> {children}
     </p>
   );
 }
 
 export function SectionTitle({ children }: { children: ReactNode }) {
   return (
-    <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+    <h2 className="font-display text-2xl font-bold tracking-tight text-white sm:text-3xl">
+      <span className="text-accent">{"// "}</span>
       {children}
     </h2>
+  );
+}
+
+export function Terminal({
+  title = "~/yustar — zsh",
+  children,
+  className = "",
+}: {
+  title?: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`border border-line bg-panel/80 shadow-[0_0_40px_-12px_rgba(45,212,191,0.25)] ${className}`}
+    >
+      <div className="flex items-center gap-2 border-b border-line bg-panel2 px-4 py-2.5">
+        <span className="flex gap-1.5" aria-hidden="true">
+          <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
+          <span className="h-2.5 w-2.5 rounded-full bg-[#27c93f]" />
+        </span>
+        <span className="ml-2 font-mono text-xs text-slate-500">{title}</span>
+      </div>
+      {children}
+    </div>
   );
 }
 
@@ -51,7 +78,7 @@ export function Section({
 
 export function Tag({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-line bg-panel2 px-3 py-1 font-mono text-[11px] text-slate-400">
+    <span className="inline-flex items-center border border-line bg-panel2 px-3 py-1 font-mono text-[11px] text-slate-400">
       {children}
     </span>
   );
@@ -76,9 +103,9 @@ export function ArrowLink({
       {children}
       <span
         aria-hidden="true"
-        className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+        className="transition-transform duration-200 group-hover:translate-x-0.5"
       >
-        ↗
+        -&gt;
       </span>
     </a>
   );

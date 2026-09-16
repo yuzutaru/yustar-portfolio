@@ -26,7 +26,7 @@ export function Contact({
 
   return (
     <Section id="contact">
-      <div className="rounded-3xl border border-line bg-gradient-to-b from-panel to-ink p-8 sm:p-12">
+      <div className="rounded-none border border-line bg-panel p-8 sm:p-12">
         <Eyebrow>Contact</Eyebrow>
         <SectionTitle>Let&apos;s build something resilient</SectionTitle>
         <p className="mt-3 max-w-2xl leading-relaxed text-slate-400">
@@ -44,9 +44,9 @@ export function Contact({
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-2xl border border-line bg-panel px-5 py-4 transition-colors hover:border-accent/40"
+                className="group flex items-center gap-4 rounded-none border border-line bg-panel px-5 py-4 transition-colors hover:border-accent/40"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-panel2 text-slate-300 transition-colors group-hover:text-accent">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-none bg-panel2 text-slate-300 transition-colors group-hover:text-accent">
                   <Icon className="h-5 w-5" />
                 </span>
                 <span className="min-w-0 flex-1">
@@ -75,7 +75,7 @@ export function Contact({
               href={linkedin.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-accent/50 px-5 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
+              className="inline-flex items-center gap-2 rounded-none border border-accent/50 px-5 py-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
             >
               Full profile on LinkedIn
               <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

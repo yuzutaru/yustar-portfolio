@@ -35,7 +35,7 @@ export function About({ profile }: { profile: Profile }) {
             {STATS.map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-line bg-panel p-4"
+                className="rounded-none border border-line bg-panel p-4"
               >
                 <p className="text-2xl font-bold text-white">{stat.value}</p>
                 <p className="mt-1 text-xs leading-snug text-slate-400">
@@ -47,7 +47,7 @@ export function About({ profile }: { profile: Profile }) {
         </div>
 
         <div className="lg:col-span-2">
-          <div className="overflow-hidden rounded-2xl border border-line bg-panel">
+          <div className="overflow-hidden rounded-none border border-line bg-panel">
             <Image
               src={profile.avatar}
               alt={`${profile.name} portrait`}
@@ -67,7 +67,7 @@ export function About({ profile }: { profile: Profile }) {
           {profile.highlights.map((highlight) => (
             <li
               key={highlight.title}
-              className="rounded-2xl border border-line bg-panel/60 p-5"
+              className="rounded-none border border-line bg-panel/60 p-5"
             >
               <p className="font-semibold text-white">{highlight.title}</p>
               <p className="mt-1.5 text-sm leading-relaxed text-slate-400">
@@ -86,7 +86,7 @@ export function About({ profile }: { profile: Profile }) {
           {profile.techStack.map((group) => (
             <div
               key={group.category}
-              className="rounded-2xl border border-line bg-panel p-5"
+              className="rounded-none border border-line bg-panel p-5"
             >
               <h4 className="text-sm font-semibold text-white">
                 {group.category}

@@ -52,7 +52,7 @@ export function Nav({
               href={profile.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gradient-to-r from-accent to-accent-soft px-4 py-1.5 text-sm font-medium text-ink transition-opacity hover:opacity-90"
+              className="rounded-none bg-accent px-4 py-1.5 text-sm font-medium text-ink transition-colors hover:bg-accent-soft"
             >
               Resume
             </a>
@@ -64,7 +64,7 @@ export function Nav({
             aria-expanded={open}
             aria-controls="mobile-menu"
             aria-label={open ? "Close menu" : "Open menu"}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-300 hover:bg-panel md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-none text-slate-300 hover:bg-panel md:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -78,7 +78,7 @@ export function Nav({
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-md px-3 py-2 text-sm text-slate-300 hover:bg-panel hover:text-white"
+                  className="rounded-none px-3 py-2 text-sm text-slate-300 hover:bg-panel hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -87,7 +87,7 @@ export function Nav({
                 href={linkedIn?.url ?? profile.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 rounded-full bg-gradient-to-r from-accent to-accent-soft px-4 py-2 text-center text-sm font-medium text-ink"
+                className="mt-2 rounded-none bg-accent px-4 py-2 text-center text-sm font-medium text-ink transition-colors hover:bg-accent-soft"
               >
                 Resume
               </a>
