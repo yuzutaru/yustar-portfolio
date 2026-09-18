@@ -19,6 +19,7 @@ import { Projects } from "@/components/Projects";
 import { Writing } from "@/components/Writing";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { Chat } from "@/components/Chat";
 
 export const metadata: Metadata = {
   title: `${profile.name} — ${profile.title}`,
@@ -71,6 +72,7 @@ export default function Page() {
         <Contact profile={profile} socials={socials} />
       </main>
       <Footer socials={socials} />
+      <Chat />
     </>
   );
 }

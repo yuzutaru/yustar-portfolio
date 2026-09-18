@@ -8,16 +8,18 @@ Single-page portfolio for Yustar Pramudana — Senior Full-Stack & Mobile Engine
 - TypeScript (strict)
 - Tailwind CSS v4
 - Zod (content contracts)
+- Vercel AI SDK + Google Gemini (Aira chatbot)
 
 ## Structure (clean architecture)
 
 ```
 src/
   app/          routes, metadata, layout — framework wiring only
+                (includes the /api/chat chatbot route)
   content/      typed data files — the single source of truth for all copy
   domain/       Zod schemas + inferred types (no React)
   components/   presentational UI, data passed in via props
-  lib/          pure helpers (date formatting)
+  lib/          pure helpers (date formatting, chat knowledge base)
 ```
 
 Dependency flow is one-way: `domain ← content ← components ← app`. The UI never reads content directly.
@@ -25,6 +27,31 @@ Dependency flow is one-way: `domain ← content ← components ← app`. The UI 
 ## Editing content
 
 All copy lives in `src/content/*.ts` and is validated at build time against the schemas in `src/domain/schemas.ts`. To add a job, project, skill or article, edit the matching content file — no component changes needed. A schema violation fails the build.
+
+## Aira — the portfolio chatbot
+
+A floating chat widget ("Aira") answers visitor questions about Yustar, grounded in the content files.
+
+- **Model:** Google Gemini (`gemini-2.0-flash`) via the Vercel AI SDK.
+- **Retrieval:** no vector DB — `src/lib/chat-context.ts` serializes `src/content/*` into a compact knowledge base that is injected into the system prompt.
+- **Guardrails (three layers):**
+  1. A **pre-filter** (`generateObject`) classifies every message as on/off-topic *before* the answer model runs. Off-topic messages get a canned deflection and never reach the LLM.
+  2. The **answer system prompt** restricts replies to the knowledge base and blocks prompt-injection attempts.
+  3. Gemini **safety settings** block harmful content categories.
+- The route also enforces a per-IP rate limit (12 req/min) and a 500-character message cap.
+
+### Setup
+
+1. Create a free API key at [Google AI Studio](https://aistudio.google.com/apikey).
+2. Add it to `.env.local`:
+
+   ```bash
+   GOOGLE_GENERATIVE_AI_API_KEY=your-key
+   ```
+
+3. On Vercel, add the same variable under **Project → Settings → Environment Variables**.
+
+Without the key, the rest of the site builds and runs normally; only `/api/chat` will fail at request time.
 
 ## Run locally
 
