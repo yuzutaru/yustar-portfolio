@@ -12,7 +12,7 @@ import { z } from "zod";
 import { profile } from "@/content";
 import { buildKnowledgeBase } from "@/lib/chat-context";
 
-const MODEL = "gemini-2.0-flash";
+const MODEL = "gemini-3.6-flash";
 const MAX_MESSAGE_LENGTH = 500;
 const MAX_MESSAGES = 20;
 const RATE_LIMIT_WINDOW_MS = 60_000;
@@ -123,8 +123,9 @@ export async function POST(req: Request) {
       prompt: question,
     });
     relevant = object.relevant;
-  } catch {
-    relevant = false;
+  } catch (err) {
+    console.error("[chat] relevance filter failed:", err);
+    relevant = true;
   }
 
   if (!relevant) {
