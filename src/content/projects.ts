@@ -24,20 +24,25 @@ export const projects = [
     owner: "client",
   }),
   ProjectSchema.parse({
-    name: "Sosmed",
+    name: "MayaAgentJob Web Portal",
     summary:
-      "Test harness for reels infinite scrolling and a short-video player with like and comment support.",
-    tech: ["Kotlin", "Jetpack Compose"],
-    url: "https://github.com/yuzutaru/Sosmed",
+      "React admin dashboard for Maya, an AI career agent — job search with AI-scored matches, category filters, and a candidate profile manager.",
+    detail:
+      "Desktop companion to the native iOS and Android clients, sharing synchronized domain contracts with the Supabase backend.",
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router", "Supabase"],
+    url: "https://github.com/yuzutaru/mayaagentjob-web",
     featured: false,
     private: false,
     owner: "personal",
   }),
   ProjectSchema.parse({
-    name: "PokemonApp_JetpackCompose",
-    summary: "Pokémon app backed by a public API, built with Jetpack Compose.",
-    tech: ["Kotlin", "Jetpack Compose", "REST API"],
-    url: "https://github.com/yuzutaru/PokemonApp_JetpackCompose",
+    name: "Yustar Portfolio",
+    summary:
+      "This single-page portfolio — Next.js 15 App Router with Zod-validated content contracts and an embedded Gemini chatbot (Aira).",
+    detail:
+      "All copy lives in schema-validated data files that fail the build on violation; the chatbot grounds its answers in that content instead of a vector DB.",
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS v4", "Zod", "Vercel AI SDK", "Gemini"],
+    url: "https://github.com/yuzutaru/yustar-portfolio",
     featured: false,
     private: false,
     owner: "personal",
