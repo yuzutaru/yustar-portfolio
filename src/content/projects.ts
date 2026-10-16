@@ -47,4 +47,38 @@ export const projects = [
     private: false,
     owner: "personal",
   }),
+  ProjectSchema.parse({
+    name: "Levela",
+    summary:
+      "Cross-platform mobile app — Android in Kotlin + Jetpack Compose and iOS in SwiftUI + SwiftData.",
+    tech: ["Kotlin", "Jetpack Compose", "SwiftUI", "SwiftData", "Android", "iOS"],
+    url: "https://github.com/yuzutaru/levela",
+    featured: false,
+    private: false,
+    owner: "personal",
+  }),
+  ProjectSchema.parse({
+    name: "Lapor Bot",
+    summary:
+      "WhatsApp activity-tracking bot in Go — self-reporting, streak leaderboards, and a web dashboard.",
+    detail:
+      "Built on whatsmeow with SQLite persistence; tracks daily group check-ins like '30 Days of Sweat'.",
+    tech: ["Go", "whatsmeow", "SQLite", "WhatsApp"],
+    url: "https://github.com/swegrowthid/lapor-bot",
+    featured: false,
+    private: false,
+    owner: "personal",
+  }),
+  ProjectSchema.parse({
+    name: "Dev Knowledge Base",
+    summary:
+      "Centralized, multi-platform knowledge base of architectural patterns, configs, and AI integrations.",
+    detail:
+      "A reference/boilerplate sandbox covering Web, iOS, Android, Supabase backend, and Gemini workflows.",
+    tech: ["React", "TypeScript", "SwiftUI", "Jetpack Compose", "Supabase", "Gemini"],
+    url: "https://github.com/yuzutaru/dev-knowledge-base",
+    featured: false,
+    private: false,
+    owner: "personal",
+  }),
 ];
