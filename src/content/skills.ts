@@ -2,6 +2,18 @@ import { SkillGroupSchema } from "@/domain/schemas";
 
 export const skillGroups = [
   SkillGroupSchema.parse({
+    category: "Mobile",
+    items: [
+      "Android (Jetpack Compose)",
+      "iOS (SwiftUI)",
+      "React Native (Expo)",
+      "Kotlin Coroutines / Flow",
+      "RxJava",
+      "Offline-first (Room, Realm)",
+      "Health Connect API",
+    ],
+  }),
+  SkillGroupSchema.parse({
     category: "Languages & Backends",
     items: [
       "Kotlin",
@@ -15,18 +27,6 @@ export const skillGroups = [
       "Supabase",
       "PostgreSQL",
       "REST / OpenAPI",
-    ],
-  }),
-  SkillGroupSchema.parse({
-    category: "Mobile",
-    items: [
-      "Android (Jetpack Compose)",
-      "iOS (SwiftUI)",
-      "React Native (Expo)",
-      "Kotlin Coroutines / Flow",
-      "RxJava",
-      "Offline-first (Room, Realm)",
-      "Health Connect API",
     ],
   }),
   SkillGroupSchema.parse({
