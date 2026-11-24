@@ -13,7 +13,7 @@ export function About({ profile }: { profile: Profile }) {
   return (
     <Section id="about">
       <Eyebrow>About</Eyebrow>
-      <SectionTitle>Enterprise discipline. AI-native delivery.</SectionTitle>
+      <SectionTitle>Android-first. Enterprise-tested. AI-accelerated.</SectionTitle>
 
       <div className="mt-8 grid gap-10 lg:grid-cols-5">
         <div className="lg:col-span-3">
