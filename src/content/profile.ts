@@ -20,9 +20,9 @@ export const profile = ProfileSchema.parse({
     "AI-Native Architecture · MCP / OpenAPI",
   ],
   about: [
-    "Mobile & full-stack engineer (10+ years) specializing in mobile-first startup delivery and modern AI-native products across Android, iOS, and Web — backed by enterprise backend experience in banking (Java, .NET C#).",
-    "I design and deliver software where AI models and autonomous agents (Claude Code, Cursor, Kilo, Opencode) are built directly into the architectural fabric — backed by deterministic guardrails, clean domain layers, and strict contract typing.",
-    "I combine enterprise-grade backend discipline with AI-accelerated workflows to ship production software at 3x velocity without compromising architectural rigor.",
+    "Senior Android engineer with 10+ years of end-to-end software development across Android (Kotlin), iOS (Swift), and Web — spanning multi-platform startup products, contract-driven architectures, custom Model Context Protocol (MCP) servers, and vision AI integration, backed by enterprise mobile banking engineering (Java, .NET C#, SQL, high-security compliance).",
+    "On Android, I design and ship production-grade apps built on Kotlin, Jetpack Compose, and clean domain layers — offline-first features, secure financial flows, and strict contract typing across platforms. I've led mobile-first startup delivery end-to-end, from architecture to release.",
+    "I combine enterprise-grade backend discipline with AI-accelerated workflows — with AI agents (Claude Code, Cursor, Kilo, Opencode) built directly into my delivery process — to ship production software at accelerated velocity without compromising architectural rigor.",
   ],
   highlights: [
     {
