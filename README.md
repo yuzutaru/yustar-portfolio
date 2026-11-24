@@ -1,6 +1,6 @@
 # Yustar Pramudana — Portfolio
 
-Single-page portfolio for Yustar Pramudana — Senior Full-Stack & Mobile Engineer (10+ yrs), Kotlin / Java / Swift, AI-accelerated systems architecture.
+Single-page portfolio for Yustar Pramudana — Senior Mobile & Full-Stack Engineer (10+ yrs), Kotlin / Java / Swift, AI-accelerated systems architecture.
 
 ## Stack
 
