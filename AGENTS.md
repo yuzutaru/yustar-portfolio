@@ -79,3 +79,4 @@ curl -sS -o /dev/null -w '%{http_code}\n' \
 - Tailwind utility classes with the theme tokens; match the existing CRT/terminal aesthetic.
 - Accessibility is expected (labels, `aria-*`, focus states).
 - Commit messages use `Type(scope): subject` — `Feat`, `Fix`, `Progress`, `Setup`.
+- When creating or managing pull requests, use `git pr create` to respect local repository credentials.
