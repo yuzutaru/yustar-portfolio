@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description: site.description,
   keywords: [
     "Yustar Pramudana",
-    "Senior Full-Stack Engineer",
+    "Senior Mobile & Full-Stack Engineer",
     "Senior Mobile Engineer",
     "Android Developer",
     "iOS Developer",

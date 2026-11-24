@@ -4,7 +4,7 @@ Context for AI agents (and humans) working in this repo. See `README.md` for the
 
 ## What this is
 
-Single-page portfolio for **Yustar Pramudana** (Senior Full-Stack & Mobile Engineer). Next.js 15 App Router, React 19, TypeScript (strict), Tailwind CSS v4, Zod content contracts, and an embedded Gemini chatbot ("Aira") via the Vercel AI SDK.
+Single-page portfolio for **Yustar Pramudana** (Senior Mobile & Full-Stack Engineer). Next.js 15 App Router, React 19, TypeScript (strict), Tailwind CSS v4, Zod content contracts, and an embedded Gemini chatbot ("Aira") via the Vercel AI SDK.
 
 ## Commands
 

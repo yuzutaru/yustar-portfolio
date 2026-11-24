@@ -3,12 +3,12 @@ import { ProfileSchema } from "@/domain/schemas";
 export const profile = ProfileSchema.parse({
   name: "Yustar Pramudana",
   firstName: "Yustar",
-  title: "Senior Full-Stack & Mobile Engineer",
+  title: "Senior Mobile & Full-Stack Engineer",
   positioning:
     "10+ years building mobile-first startup apps and AI-native products, grounded in banking-grade backend engineering.",
   location: "Medan, Indonesia",
   availability:
-    "Open to Senior / Lead Full-Stack, Mobile & AI-Native roles · Global Remote · ID, SG, MY, JP, SA",
+    "Open to Senior / Lead Mobile, Full-Stack & AI-Native roles · Global Remote · ID, SG, MY, JP, SA",
   avatar: "/me.jpg",
   heroAvatar: "/avatar.jpg",
   resumeUrl: "https://www.linkedin.com/in/yustar-pramudana/",
@@ -20,7 +20,7 @@ export const profile = ProfileSchema.parse({
     "AI-Native Architecture · MCP / OpenAPI",
   ],
   about: [
-    "Full-stack & mobile engineer (10+ years) specializing in mobile-first startup delivery and modern AI-native products across Android, iOS, and Web — backed by enterprise backend experience in banking (Java, .NET C#).",
+    "Mobile & full-stack engineer (10+ years) specializing in mobile-first startup delivery and modern AI-native products across Android, iOS, and Web — backed by enterprise backend experience in banking (Java, .NET C#).",
     "I design and deliver software where AI models and autonomous agents (Claude Code, Cursor, Kilo, Opencode) are built directly into the architectural fabric — backed by deterministic guardrails, clean domain layers, and strict contract typing.",
     "I combine enterprise-grade backend discipline with AI-accelerated workflows to ship production software at 3x velocity without compromising architectural rigor.",
   ],
@@ -88,7 +88,7 @@ export const profile = ProfileSchema.parse({
     }
   ],
   keywords: [
-    "Senior Full-Stack Engineer",
+    "Senior Mobile & Full-Stack Engineer",
     "Senior Mobile Engineer",
     "Android Engineer",
     "iOS Engineer",
